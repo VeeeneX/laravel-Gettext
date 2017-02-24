@@ -16,19 +16,16 @@ Begin by installing this package through Composer.
 
 ### Laravel installation
 
+Change `config/app.php`
+
+Add to `aliases`
 ```php
+    Eusonlito\LaravelGettext\GettextServiceProvider::class,
+```
 
-// config/app.php
-
-'providers' => [
-    '...',
-    'Eusonlito\LaravelGettext\GettextServiceProvider',
-];
-
-'aliases' => [
-    '...',
-    'Gettext'    => 'Eusonlito\LaravelGettext\Facade',
-];
+Add to `aliases`
+```php
+    'Gettext'    => Eusonlito\LaravelGettext\Facade::class,
 ```
 
 Now you have a ```Gettext``` facade available.
